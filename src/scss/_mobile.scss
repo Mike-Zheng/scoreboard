@@ -1,0 +1,42 @@
+//RWD simple
+
+$screen-xs-max: 768px;
+$screen-sm-min: 769px;
+$screen-sm-max: 992px;
+$screen-md-min: 993px;
+$screen-md-max: 1200px;
+$screen-lg-min: 1201px;
+//電腦
+@mixin pc-width() {
+    @media all and (min-width: $screen-lg-min) {
+        @content;
+    }
+}
+
+//平板
+@mixin pad-width() {
+    @media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) {
+        @content;
+    }
+}
+
+//小平板
+@mixin small-pad-width() {
+    @media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        @content;
+    }
+}
+
+//手機
+@mixin phone-width() {
+    @media all and (max-width: $screen-xs-max) {
+        @content;
+    }
+}
+
+//use
+
+// @include pc-width{}
+// @include pad-width() {}
+// @include small-pad-width() {}
+// @include phone-width() {}
