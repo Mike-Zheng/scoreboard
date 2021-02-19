@@ -26,4 +26,3 @@ https://mike-zheng.github.io/scoreboard
 node -v 6.11.0
 ```
 
-整理上傳
